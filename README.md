@@ -16,48 +16,49 @@ Practicing compassionate code reviews is important (you can learn more from this
 ## Base Required Features 
 
 - Multi-Part Form:  
-  - [ ] Able to add feedback
-    - [ ] Data collected on individual pages & components
-    - [ ] Click on next takes you to the next page in sequence
-    - [ ] Data saves in DB after *all* the parts are completed (not piecemeal)
-    - [ ] Thank you page takes you back to the first view
-    - [ ] Old Data is cleared on form completion
+  - [√ ] Able to add feedback
+    - [√ ] Data collected on individual pages & components
+    - [ √] Click on next takes you to the next page in sequence
+    - [ √] Data saves in DB after *all* the parts are completed (not piecemeal)
+    - [ X] Thank you page takes you back to the first view
+    - [ √] Old Data is cleared on form completion
 
 - Client code:
-  - [ ]  Individual components for each form part
-  - [ ]  Redux setup complete
-    - [ ] Store linked to react with `<Provider>`
-    - [ ] Store setup with reducer(s) and logger middleware 
-  - [ ] Reducers & Actions Working
-    - [ ] Actions are in SCREAMING_SNAKE_CASE and semantically named
-    - [ ] Actions have a `type` key, and `payload` if sending data
-    - [ ] Reducers are returning a new state, or the old state (not mutating)
-    - [ ] Reducers are using spread correctly (to keep old data, while adding new)
-  - [ ] Review Component shows at all times with current redux state
-  - [ ] React-Redux Working
-    - [ ] Dispatching actions onClick
-    - [ ] Grabbing data from the redux store with `useSelector`
-  - [ ] Axios POST request to add feedback
+  - [ √]  Individual components for each form part
+  - [ √]  Redux setup complete
+    - √[ √] Store linked to react with `<Provider>`
+    - [ √] Store setup with reducer(s) and logger middleware 
+  - [ √] Reducers & Actions Working
+    - [√ ] Actions are in SCREAMING_SNAKE_CASE and semantically named
+    - [ √] Actions have a `type` key, and `payload` if sending data
+    - [ √] Reducers are returning a new state, or the old state (not mutating)
+    - [ √] Reducers are using spread correctly (to keep old data, while adding new)
+  - [ √] Review Component shows at all times with current redux state
+
+  - [√ ] React-Redux Working
+    - [ √] Dispatching actions onClick
+    - [ √] Grabbing data from the redux store with `useSelector`
+  - [ √] Axios POST request to add feedback
 
 
 - Server code:   
-  - [ ] Router made for GET, POST
+  - [ √] Router made for GET, POST
 
 
 ## General Items
 Feedback should be provided for these items, but they do not impact scoring.
 
 - Git 
-  - [ ] Multiple git commits showing incremental progress
-  - [ ] Commits are descriptive of the changes made or feature added 
-  - [ ] Has .gitignore with node_modules
-  - [ ] Readme file updated (assuming this is previously discussed)
+  - [ √] Multiple git commits showing incremental progress
+  - [ √] Commits are descriptive of the changes made or feature added 
+  - [ √] Has .gitignore with node_modules
+  - [X ] Readme file updated (assuming this is previously discussed)
 - Code Style 
-  - [ ] Appropriate amount of code comments
-  - [ ] Code is consistently formatted
+  - [√ ] Appropriate amount of code comments
+  - [√ ] Code is consistently formatted
 - Client
-  - [ ] Appropriate use of HTML tags
-  - [ ] Basic CSS styling with margins/padding
+  - [√ ] Appropriate use of HTML tags
+  - [ √] Basic CSS styling with margins/padding
 
 
 ## Stretch Goals
@@ -72,11 +73,11 @@ First must be complete for score of  _Exceeds Expectations_
 
 
 - Admin View
-  - [ ] All entries are visible with correct data from inputs
-    - [ ] Most recent is at the top
+  - [ √] All entries are visible with correct data from inputs
+    - [√ ] Most recent is at the top
   - [ ] Can Delete an entry
     - [ ] User is prompted before deleting
-  - [ ] Axios GET request to get all feedback for `/admin` view in componentDidMount
+  - [ √] Axios GET request to get all feedback for `/admin` view in componentDidMount
 
   Busywork Goals, consider removing or making more useful
 
@@ -90,19 +91,24 @@ First must be complete for score of  _Exceeds Expectations_
 ```
 Hey ___,
 
+ forgot to add Thank you page takes you back to the first view
+ need to let the user know why they can not move on to the next page/ either a alert or popup saying required.
+
+
+
 General Feedback.
 
 ---
 | Functional Requirements | Complete? |
 | --- | :---: |
-| Multi page form with client side routing and navigation (next button) | no |
-| Data stored in Redux when navigating from page to page | no |
-| User is notified when trying to leave a blank score | no |
-| Review Component displays scores and comments from current redux state | no |
-| Submit button sends data to the server via Axios | no |
+| Multi page form with client side routing and navigation (next button) | yes |
+| Data stored in Redux when navigating from page to page | yes |
+| User is notified when trying to leave a blank score | part |
+| Review Component displays scores and comments from current redux state | yes |
+| Submit button sends data to the server via Axios | yes|
 | Confirmaion Page displays after data is POSTed to the server | no |
 | Button on Confirmation Page clears Redux and starts a new survey | no |
-| Views are broken down into components | no |
+| Views are broken down into components | yes |
 
 ---
 ### Notes:
@@ -112,12 +118,12 @@ Notes on the above Functional Requirements.
 ---
 | General Items | Complete? |
 | --- | :---: |
-| More than 15 git commits | no |
-| Commits are descriptive of the changes made or feature added | no |
+| More than 15 git commits | yes |
+| Commits are descriptive of the changes made or feature added | yes |
 | Readme file updated | no |
-| Appropriate amount of code comments | no |
-| Code is consistently formatted | no |
-| Server code organized with router & module files | no |
+| Appropriate amount of code comments | yes |
+| Code is consistently formatted | yes |
+| Server code organized with router & module files | yes |
 
 ---
 ### Notes:
